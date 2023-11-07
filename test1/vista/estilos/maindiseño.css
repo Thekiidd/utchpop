@@ -1,0 +1,380 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+}
+/* Estilo general para todos los enlaces en todos los estados */
+a, a:link, a:visited, a:hover, a:active, a:focus {
+    color: #fff;  /* Color blanco, ajusta al color que prefieras */
+    text-decoration: none;
+    outline: none;  /* Esto elimina el contorno que algunos navegadores agregan en el estado :focus */
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;  /* Transición suave entre estados */
+}
+
+/* Estilo específico para el estado hover y active */
+a:hover, a:active {
+    background-color: rgba(255, 255, 255, 0.2);  /* Fondo ligero en hover y active */
+    transform: translateY(-5px);  /* Efecto de "levantamiento" en hover y active */
+}
+
+/* Si deseas un color diferente para enlaces visitados */
+a:visited {
+    color: #777;  /* Color gris claro para enlaces visitados, ajusta al color que prefieras */
+}
+
+/* Estilo específico para el estado focus */
+a:focus {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);  /* Añade un contorno sutil en el estado :focus para accesibilidad */
+}
+
+
+
+
+
+
+/* Estilos para el Modal */
+.modal-content {
+    background-color: rgba(8, 61, 119, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+   border-bottom: 1px solid #dee2e6;
+    background-color: #0a3d62;  /* Neón azul */
+    color: #fff;
+}
+
+.modal-title {
+    color: #fff;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.nav-tabs .nav-link {
+    color: #495057;
+    background-color: #f8f9fa;
+    border: 1px solid transparent;
+    border-radius: 5px 5px 0 0;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff;
+    border-radius: 5px 5px 0 0;
+}
+
+.nav-tabs .nav-link:hover {
+    border-color: #e9ecef #e9ecef #dee2e6;
+}
+
+.close {
+    color: #fff;
+    opacity: 1;
+}
+
+  
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 0px 0px;
+    top: 0;
+    height: auto;
+    background: linear-gradient(to right,  #0a3d62, #38ada9);  /* Neones azules-verdes */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.left-section, .right-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    height: 60px;
+    color: #fff;
+    font-size: 25px;
+}
+.logo img {
+    height: 50px;
+    width: auto; /* Ajusta el ancho automáticamente para mantener la proporción */
+    display: block;/* Elimina el espacio extra alrededor de la imagen */
+}
+
+nav, .auth-links{
+    align-items: center;
+}
+
+nav a,
+.dropdown-toggle,
+.auth-links a {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0px 5px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 5px 5px;
+    transition: background-color 0.3s ease;
+    transition: transform 0.3 ease;
+}
+
+nav a:hover,
+.dropdown-toggle:hover,
+.auth-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+    transform: translateY(-5px);
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    z-index: 1000; /* Ajusta el z-index a un valor más alto */
+    display: none;
+    position: absolute;
+    background-color: #000;
+    min-width: 160px;
+    box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    transition: all 0.3 ease;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.dropdown-menu a {
+    color: #3d3d3d;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.auth-links {
+    margin-left: 0; /* Añadido margen a la izquierda para separar de los otros enlaces */
+}
+
+
+.auth-links a i {
+    font-size: 25px;  /* Ajusta este valor */
+}
+
+nav a:not(:last-child),
+.dropdown:not(:last-child) {
+    border-right: 1px solid #ddd;
+    margin-right: 10px;
+    padding-right: 10px;
+}
+
+.icon-button:hover i {
+    color: #000000;  /* O cualquier otro color que prefieras */
+    transition: color 0.3s ease;
+}
+[data-tooltip]:hover:after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .left-section,
+    .right-section {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.video-banner {
+    z-index: -1; /* Ajusta el z-index a un valor más bajo */
+    height: 100vh;
+    overflow: hidden;
+}
+
+#videoBackground {
+    z-index: -1; /* Ajusta el z-index a un valor más bajo */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    background-color: rgba(rgb(0, 0, 0), rgb(50, 51, 50), rgb(96, 96, 97), 0.1);
+}
+
+.video-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255); /* o el color de texto que prefieras */
+    text-align: center;
+    animation: fadeInUp 2s ease-in-out forwards;
+}
+.video-content h1, .video-content p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.video-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #33ff00;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.video-button:hover {
+    background-color: #33ff00;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.contenedor-principal{
+    max-width: 1000px; /* Ajusta este valor al ancho deseado */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px; /* Agrega un padding en los lados para mejor espaciado en pantallas pequeñas */
+    border-color: none;
+}
+
+.news-section {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    
+}
+
+.news-section, .courses-section, .community-section {
+    padding: 20px;
+    
+}
+.main-news {
+    flex: 1;  /* Ocupa 2 partes del espacio disponible */
+    margin-right: 20px;
+}
+.secondary-news {
+    flex: 1; /* Ocupa 1 parte del espacio disponible */
+}
+.secondary-news div {
+    flex-basis: 48%;
+    background-color: #99FF99; /* verde bajito */
+    padding: 10px;
+    text-align: center;
+}
+.course-carousel, .community-news {
+    padding: 20px;
+    text-align: center;
+}
+#miCarrusel, .contenedor-noticias, .secondary-news {
+    box-shadow: 0 10px 20px rgba(17, 16, 16, 0.685); /* Sombra blanca con un poco de transparencia */
+    animation: float 3s infinite ease-in-out;
+}
+
+#pollResults{
+    display: none;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+footer {
+    background: linear-gradient(to top, transparent, #051622);  
+    color: #38ada9;  /* Neón verde */
+    padding: 10px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+.copyright-section,
+.complaint-section,
+.map-section {
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+}
+
+#complaintForm textarea {
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+#complaintForm input[type="submit"] {
+    background-color: #38ada9;  /* Neón verde */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+.error {
+    color: red;
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 5px;
+    border: 1px solid red;
+    z-index: 1000px;
+}
+
+

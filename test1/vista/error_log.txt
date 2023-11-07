@@ -1,0 +1,8 @@
+[2023-10-26 00:17:55] Conexión fallida: Access denied for user 'root'@'localhost' (using password: YES)
+[2023-10-26 00:18:00] Conexión fallida: Access denied for user 'root'@'localhost' (using password: YES)
+[2023-10-26 00:18:02] Conexión fallida: Access denied for user 'root'@'localhost' (using password: YES)
+[2023-10-26 00:18:03] Conexión fallida: Access denied for user 'root'@'localhost' (using password: YES)
+[2023-10-26 00:18:03] Conexión fallida: Access denied for user 'root'@'localhost' (using password: YES)
+[2023-10-26 00:18:03] Conexión fallida: Access denied for user 'root'@'localhost' (using password: YES)
+[2023-10-26 00:18:03] Conexión fallida: Access denied for user 'root'@'localhost' (using password: YES)
+[2023-10-27 00:15:53] Conexión fallida: Access denied for user 'root'@'localhost' (using password: NO)

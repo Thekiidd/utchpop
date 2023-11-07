@@ -1,0 +1,202 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0e4cc; /* Pastel green */
+    color: #333; /* Darker text for better contrast */
+}
+
+a, a:link, a:visited, a:hover, a:active, a:focus {
+    font-size: 14px;
+}
+
+a:hover, a:active {
+    background-color: rgba(214, 100, 100, 0.2);
+    transform: translateY(-5px);
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+.logo {
+    font-size: 24px;
+    border-radius: 50px;
+    font-weight: bold;
+}
+nav a {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0px 5px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 5px 5px;
+    transition: background-color 0.3s ease;
+}
+
+.user-profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  /* Esto asegura que la imagen y el texto estén uno debajo del otro */
+}
+.user-profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.user-profile h2 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.sidebar{
+    width: 250px;
+    min-height: 100vh;
+    color: white;
+    padding: 20px;
+    position: sticky;
+    top: 0;  /* Ajusta según tus necesidades, por ejemplo, si tienes un encabezado fijo */
+    height: 100vh;  /* Esto garantizará que la barra lateral ocupe todo el alto de la ventana */
+    overflow-y: auto;  /* Esto agregará una barra de desplazamiento si el contenido de la barra lateral es demasiado largo */
+    background-color: #34495e;
+    transition: width 0.3s ease-in-out;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin-top: 25px;
+    font-size: 18px;
+}
+
+.sidebar nav ul li a {
+    display: block;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #009966;
+    color: white;
+}
+
+.sidebar nav ul li a .icon {
+    margin-right: 10px;
+}
+
+.main-content {
+    flex: 1;
+    padding: 40px;
+    background-color: seagreen;
+}
+
+.main-content section {
+    transition: background-color 0.3s ease;
+}
+
+.main-content section:hover {
+    background-color: none;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="password"], 
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #33ff00;
+    border-radius: 5px;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3 ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #28a745;
+}
+
+
+/* Para Diseño responsivo */
+@media only screen and (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+}
+.hidden {
+    display: none;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Add this class to the sidebar or any element you want to animate */
+  .slide-in-left {
+    animation: 0.5s ease-out 0s 1 slideInFromLeft;
+  }
+
+.card-dashboard {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.card-dashboard:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+@media (max-widht: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
+}
